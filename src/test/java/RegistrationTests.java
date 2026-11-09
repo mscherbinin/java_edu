@@ -17,7 +17,7 @@ public class RegistrationTests extends BaseTest {
     void passwordNotMatch() {
         open("/register");
         $("[data-testid=register-login-input]").setValue("qwe");
-        $("[data-testid=register-password-input]").setValue("123456");
+        $("[data-testid=register-password-input]").setValue("12345678");
         $("[data-testid=confirm-password-input]").setValue("1234567").pressEnter();
         $("[data-testid=register-error-message]").shouldHave(text("Passwords do not match"));
     }
